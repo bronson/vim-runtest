@@ -21,7 +21,7 @@ An alternative is rubytest, https://github.com/janx/vim-rubytest
 I really tried to like this plugin but never found it reliable.
 
 
-TODO: make :RSpec (RSpec 2.0+) and :Test (Test::Unit, MiniTest) work too.
+TODO: make :Test (Test::Unit, MiniTest) work too.
 TODO: To run a single test, put the cursor in the test and hit <leader>t.
 TODO: To run all tests in a file, open the file and hit <leader>T.
 
