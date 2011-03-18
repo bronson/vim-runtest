@@ -12,7 +12,7 @@ function! RunSpec(command)
   else
     let dir = a:command
   endif
-  cexpr system("spec -r " . s:home . "/spec_formatter.rb -f Spec::Runner::Formatter::VimSpecFormatter " . dir)"a:command)
+  cexpr system("spec -r " . s:home . "/spec_formatter.rb -f Spec::Runner::Formatter::VimSpecFormatter " . dir)
   cwindow
 endfunction
 
@@ -27,7 +27,7 @@ function! RunRSpec(command)
   else
     let dir = a:command
   endif
-  cexpr system("rspec -r " . s:home . "/rspec_formatter.rb -f RSpec::Core::Formatters::VimFormatter " . dir)"a:command)
+  cexpr system("rspec -r " . s:home . "/rspec_formatter.rb -f RSpec::Core::Formatters::VimFormatter " . dir)
   cwindow
 endfunction
 
