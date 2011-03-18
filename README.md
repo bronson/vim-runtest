@@ -1,7 +1,7 @@
 # RSpec Vim Bundle
 
 Runs Ruby specs from within Vim and supports the quickfix window to
-navigate any test failures.
+navigate to test failures.
 
 
 ## Installation
@@ -16,10 +16,22 @@ Same as any other Vim plugin.
 
 ## Usage
 
-To run all specs, type :Spec (RSpec 1.x) or :RSpec (RSpec 2.x).
+To run all RSpec 1.x specs:
 
-If you're unhappy with the results in the quickfix window, it's easy
-to tweak the appropriate formater.rb file.
+    :Spec
+    :Spec spec/views
+    :Spec spec/views/a*
+
+To run all RSpec 2.x specs:
+
+    :RSpec
+    :RSpec spec/views
+    :RSpec spec/views/a*
+
+To run all MiniTest tests (can't accept dirs):
+
+    :MiniTest
+    :MiniTest test/views/\*
 
 
 ## Alternatives
@@ -36,6 +48,7 @@ to tweak the appropriate formater.rb file.
 
 * what's the best Emacs spec runner?
 
+
 ## Authors
 
  * Wincent Colaiuta <https://wincent.com>
@@ -46,8 +59,9 @@ to tweak the appropriate formater.rb file.
 
 ## TODO
 
- * make :Test (Test::Unit, MiniTest) work too.
+ * make Test::Unit work too.
  * To run a single test, put the cursor in the test and hit <leader>t.
  * To run all tests in a file, open the file and hit <leader>T.
  * Very cool idea: <https://github.com/reinh/vim-makegreen>
+ * Add a Test command that will run all tests (just use autotest!)
 
