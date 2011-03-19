@@ -20,7 +20,6 @@ endfunction
 command! -nargs=? -complete=file Spec call RunSpec(<q-args>)
 
 
-
 function! RunRSpec(command)
   if a:command == ''
     let dir = 'spec'
@@ -41,9 +40,22 @@ function! RunMiniTest(command)
   else
     let files = a:command
   endif
-  cexpr system("ruby -rubygems -Ilib:bin:test:. -rminitest/autorun -e 'ARGV.each { \|a\| require \"./\"+a }' " . files)
+  cexpr system("ruby -Ilib:bin:test:. -rubygems -rminitest/autorun -e 'ARGV.each { \|a\| require \"./\"+a }' " . files)
   cwindow
 endfunction
 
 command! -nargs=? -complete=file MiniTest call RunMiniTest(<q-args>)
+
+
+function! RunTestUnit(command)
+  if a:command == ''
+    let files = substitute(glob("test/**/test_*.rb"), "\n", " ", "g")
+  else
+    let files = a:command
+  endif
+  cexpr system("ruby -Ilib:bin:test:. -rtest/unit -e 'ARGV.each { \|a\| require \"./\"+a }' " . files)
+  cwindow
+endfunction
+
+command! -nargs=? -complete=file TestUnit call RunTestUnit(<q-args>)
 

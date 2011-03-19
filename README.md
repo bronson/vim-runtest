@@ -8,9 +8,9 @@ navigate to test failures.
 
 Same as any other Vim plugin.
 
- * Best: use <http://github.com/gmarik/vundle> or
-   <http://github.com/bronson/vim-update-bundles>
- * Better: use Pathogen and clone this repo into ~/.vim/bundle
+ * Best: use [Vundle](http://github.com/gmarik/vundle) or
+   [vim-update-bundles](http://github.com/bronson/vim-update-bundles).
+ * Better: use [Pathogen](http://www.vim.org/scripts/script.php?script_id=2332) and clone this repo into ~/.vim/bundle.
  * Good: Just copy these files into your ~/.vim directory.
 
 
@@ -33,6 +33,11 @@ To run all MiniTest tests (can't accept dirs):
     :MiniTest
     :MiniTest test/views/\*
 
+To run all Test::Unit tests (can't accept dirs):
+
+    :TestUnit
+    :TestUnit test/views/\*
+
 
 ## Alternatives
 
@@ -43,6 +48,10 @@ To run all MiniTest tests (can't accept dirs):
 * vim-rspec: <https://github.com/taq/vim-rspec><br/>
     Uses hpricot/xslt to postprocess instead of using an rspec formatter.<br/>
     :RunSpec runs current file, :RunSpecs runs all tests
+
+* VimTestRunner: <https://github.com/dahu/VimTestRunner><br/>
+    Works for Django (Python) and Ruby, nice features
+    <leader>y to run current file, <leader>a to run all tests, shows test results as a green or red bar.
 
 * rspec-tmbundle (for TextMate users): <https://github.com/rspec/rspec-tmbundle>
 
@@ -59,9 +68,9 @@ To run all MiniTest tests (can't accept dirs):
 
 ## TODO
 
- * make Test::Unit work too.
  * To run a single test, put the cursor in the test and hit <leader>t.
  * To run all tests in a file, open the file and hit <leader>T.
+ * Add support for Perl and Python testing too
  * Very cool idea: <https://github.com/reinh/vim-makegreen>
  * Add a Test command that will run all tests (just use autotest!)
 
