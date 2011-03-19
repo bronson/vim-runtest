@@ -1,7 +1,11 @@
-# RSpec Vim Bundle
+# RunTest Vim Plugin
 
-Runs Ruby specs from within Vim and supports the quickfix window to
-navigate to test failures.
+Run unit tests from within Vim and navigate to test failures using the quickfix window.  Supports:
+
+* Ruby: [RSpec 2](http://relishapp.com/rspec),
+    [RSpec 1](http://rspec.info/),
+    [MiniTest](https://github.com/seattlerb/minitest), and
+    [Test::Unit](http://stdlib.rubyonrails.org/libdoc/test/unit/rdoc/classes/Test/Unit.html)
 
 
 ## Installation
