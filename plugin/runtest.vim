@@ -1,6 +1,4 @@
-" rspec-vimbundle.vim: Runs rspec, presents results in quickfix window.
-" Requires Vim to be compiled with Ruby extensions, and for the RSpec
-" formatters to be in this plugin's root directory.
+" Runs test and presents results in quickfix window.
 
 let s:home = expand("<sfile>:p:h:h")
 
