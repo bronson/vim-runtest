@@ -62,10 +62,9 @@ function! RunTestFile(...)
     let command = TestCommand(expand("%"), line)
     if command != -1
         let g:previous_test = command
-    end
-
-    if exists("g:previous_test")
-        call RunTests(g:previous_test)
+        call RunTests(command)
+    else
+        echo "Could not determine test to run."
     end
 endfunction
 
