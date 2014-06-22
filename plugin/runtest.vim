@@ -5,8 +5,6 @@
 " and then tweak the heck out of it.
 
 
-" TODO:
-" use Dispatch and populate the quickfix window
 " test cucumber .features file
 " add support for test::unit and minitest
 " add support for perl testing
@@ -18,6 +16,9 @@ nnoremap <leader>T :call RunTestFile()<cr>
 nnoremap <leader>r :call RunTests(g:previous_test)<cr>
 " running all tests doesn't change the previous test.
 nnoremap <leader>R :call RunTests('.')<cr>
+
+" run-last-test runs all tests if there's no previous test
+let g:previous_test = '.'
 
 
 if !exists("g:test_runner")
@@ -78,6 +79,3 @@ function! RunTests(test)
     end
     exec test
 endfunction
-
-
-
