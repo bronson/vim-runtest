@@ -23,7 +23,7 @@ let g:previous_test = '.'
 
 if !exists("g:test_runner")
     let g:test_runner = ":!"
-    let g:test_runner = ":Dispatch "
+    " let g:test_runner = ":Dispatch "
 endif
 
 function! TestCommand(filename, lineno)
